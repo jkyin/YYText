@@ -24,9 +24,11 @@ static int _YYTextKeyboardViewFrameObserverKey;
 @end
 
 
+// 修改后的代码
 @implementation _YYTextKeyboardViewFrameObserver {
-    __unsafe_unretained UIView *_keyboardView;
+    __weak UIView *_keyboardView;
 }
+
 - (void)addToKeyboardView:(UIView *)keyboardView {
     if (_keyboardView == keyboardView) return;
     if (_keyboardView) {
